@@ -1,0 +1,51 @@
+.is-prime {
+	color: #00E676;
+}
+
+.not-prime {
+	color: #FF3D00;
+}
+
+#error {
+	color: red;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-size: 14pt;
+}
+
+body {
+	background: #a9ffec;
+	font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+main {
+	max-width: 75%;
+	margin: auto;
+}
+
+header {
+	border-bottom: 1px solid #afafaf;
+}
+
+button[type=submit] {
+	padding: 5px 15px;
+	background: #ccc;
+	border: 0 none;
+	cursor: pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+input[type=number] {
+	padding: 5px 15px;
+	background: #f3ff87;
+	border: 0 none;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}

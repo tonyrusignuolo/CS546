@@ -1,0 +1,14 @@
+{{#if people}}
+<ul>
+	{{#each people}}
+	<li>
+		<a href="/details/{{this.id}}">{{this.firstName}} {{this.lastName}}</a>
+	</li>
+	{{/each}}
+</ul>
+{{else}}
+<p class="not-found">
+	We're sorry, but no results were found for {{personName}}.
+</p>
+{{/if}}
+<a href="/">Make another search</a>

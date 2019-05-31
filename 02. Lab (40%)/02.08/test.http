@@ -1,0 +1,105 @@
+@url = http://localhost:3000
+
+GET {{url}} HTTP/1.1
+
+# animals
+###
+
+POST {{url}}/search HTTP/1.1
+content-type: application/json
+
+{
+    "personName": ""
+}
+
+###
+
+POST {{url}}/animals HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Mortimer",
+    "animalType": "Giraffe"
+}
+
+###
+
+POST {{url}}/animals HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Billy",
+    "animalType": "Salstead"
+}
+
+###
+
+GET {{url}}/animals/{{mortimerId}} HTTP/1.1
+
+###
+
+PUT {{url}}/animals/{{mortimerId}} HTTP/1.1
+content-type: application/json
+
+{
+	"newName": "Nerm",
+	"newAnimalType": "fucking goose"
+}
+
+###
+
+DELETE {{url}}/animals/{{mortimerId}} HTTP/1.1
+
+# posts
+###
+
+GET {{url}}/posts HTTP/1.1
+
+###
+
+POST {{url}}/posts HTTP/1.1
+content-type: application/json
+
+{
+    "title": "title1",
+    "author": "{{mortimerId}}",
+    "content": "content1"
+}
+
+###
+
+POST {{url}}/posts HTTP/1.1
+content-type: application/json
+
+{
+    "title": "title2",
+    "author": "{{mortimerId}}",
+    "content": "content2"
+}
+
+###
+
+GET {{url}}/posts/{{postId}} HTTP/1.1
+
+###
+
+PUT {{url}}/posts/{{postId}} HTTP/1.1
+content-type: application/json
+
+{
+    "newTitle": "helloof",
+	"newContent": "dookus"
+}
+
+###
+
+DELETE {{url}}/posts/{{postId}} HTTP/1.1
+
+# likes
+###
+
+POST {{url}}/likes/{{mortimerId}}?postId={{postId}} HTTP/1.1
+
+###
+
+DELETE {{url}}/likes/{{mortimerId}}?postId={{postId}} HTTP/1.1

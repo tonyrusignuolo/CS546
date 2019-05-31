@@ -1,0 +1,31 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-size: 14pt;
+}
+
+body {
+	background: #dedede;
+	font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+main {
+	max-width: 75%;
+	margin: auto;
+}
+
+header {
+	border-bottom: 1px solid #afafaf;
+}
+
+.error {
+	color: #ff0000;
+}
+
+.searchForm, .not-found {
+	border-style: solid;
+	border-color: black;
+}
